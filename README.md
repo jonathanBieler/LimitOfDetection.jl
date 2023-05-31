@@ -1,4 +1,4 @@
-# LimitOfDetection
+# LimitOfDetection.jl
 
 [![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://jonathanBieler.github.io/LimitOfDetection.jl/stable/)
 [![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://jonathanBieler.github.io/LimitOfDetection.jl/dev/)
@@ -6,20 +6,24 @@
 [![Coverage](https://codecov.io/gh/jonathanBieler/LimitOfDetection.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/jonathanBieler/LimitOfDetection.jl)
 
 
-### LimitOfDetection
+### Limit of Detection
 
 The limit of detection (LoD) is the lowest value of a variable `x` at which an event can 
-be detected with a given sensitivity. For example, a smoke detector will trigger at a
-concentration of 15,000 particles per cm^3 with 95% probability.
+be detected with a given sensitivity. For example, a smoke detector that triggers at a
+concentration of 15,000 particles per cm^3 with 95% probability has a 95%-LoD of 15,000.
 
-This package uses a probit or logit model from the GLM package to estimate the LoD, given a vector
-of the variable considered and the corresponding boolean detection status (true = detected). 
-In addition it performes sampling using AdaptiveMCMC to provide error estimates on the LoD, and
+This package uses a probit or logit model from the [GLM](https://github.com/JuliaStats/GLM.jl) package to estimate the LoD, taking as input a vector
+containing the values of the variable considered (e.g. smoke concentration) and the corresponding boolean detection status (`true` = detected). 
+In addition it performs sampling using [AdaptiveMCMC](https://github.com/mvihola/AdaptiveMCMC.jl) to provide error estimates on the LoD, and
 a plot recipee is provided to visualize the results.
+
+![screenshot](docs/lod_plot.png)
 
 #### Usage
 
 ```julia
+using LimitOfDetection
+
 # generate artificial data   
 x = LinRange(0,1,100)
 link = ProbitLink()
@@ -38,6 +42,6 @@ Limit of Detection:
 95%-LoD  0.670671  0.670189  0.0134975   0.648664   0.693332
 ────────────────────────────────────────────────────────────
 
-julia>using Plots; plot(model)
+julia> using Plots; plot(model)
 
 ```
