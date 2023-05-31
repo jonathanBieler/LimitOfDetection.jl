@@ -46,7 +46,7 @@ julia> using Plots; plot(model)
 #### Methods
 
 ```julia
-    MLE(model) # return the maxmimum-likelihood estimator of the LoD
-    mean(model) # return the mean aposteriori of the LoD
-    quantile(model, q) # return the quantile q of the posterior distribution
+MLE(model) # returns the maxmimum-likelihood estimator of the LoD
+mean(model) # returns the mean aposteriori of the LoD
+quantile(model, q) # returns the quantile q of the posterior distribution
 ```
