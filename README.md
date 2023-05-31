@@ -4,7 +4,7 @@
 [![Coverage](https://codecov.io/gh/jonathanBieler/LimitOfDetection.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/jonathanBieler/LimitOfDetection.jl)
 
 
-### Limit of Detection
+### Introduction
 
 The limit of detection (LoD) is the lowest value of a variable `x` at which an event can 
 be detected with a given sensitivity. For example, a smoke detector that triggers at a
@@ -17,7 +17,7 @@ a plot recipee is provided to visualize the results.
 
 ![screenshot](docs/lod_plot.png)
 
-#### Usage
+### Usage
 
 ```julia
 using LimitOfDetection
