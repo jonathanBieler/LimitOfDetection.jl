@@ -19,7 +19,7 @@ end
     q1 = quantile(model, (1-CI_level)/2)
     q2 = quantile(model, 1 - (1-CI_level)/2)
     μ = t(mean(model))
-    lod_title = "$lod_label: $(μ)%, $(t(100*CI_level))%-CI: [$(t(q1)), $(t(q2))]"
+    lod_title = "$lod_label: $(μ), $(t(100*CI_level))%-CI: [$(t(q1)), $(t(q2))]"
 
     layout := @layout [logit           
                        lod{0.5w} params{0.5w}]

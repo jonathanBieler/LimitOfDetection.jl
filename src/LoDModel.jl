@@ -60,7 +60,7 @@ catch err
     missing
 end
 
-function fit(::Type{LoDModel}, x::AbstractVector, detected::Vector{Bool}; 
+function fit(::Type{LoDModel}, x::AbstractVector, detected::AbstractVector{Bool}; 
     Nsamples = 50_000, 
     sensitivity = 0.95,
     link = ProbitLink()

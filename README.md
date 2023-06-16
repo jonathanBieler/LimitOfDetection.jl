@@ -40,7 +40,7 @@ Limit of Detection:
 95%-LoD  0.670671  0.670189  0.0134975   0.648664   0.693332
 ────────────────────────────────────────────────────────────
 
-julia> using Plots; plot(model)
+julia> using Plots; plot(model; CI_level = 0.9, label = "x")
 ```
 
 #### Methods

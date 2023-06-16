@@ -1,7 +1,7 @@
 name = "LimitOfDetection"
 uuid = "9907b50f-aa68-471e-a8e7-09e46bc3166c"
 authors = ["Jonathan Bieler <jonathan.bieler@alumni.epfl.ch> and contributors"]
-version = "0.1.0"
+version = "0.1.1"
 
 [deps]
 AdaptiveMCMC = "717c3277-546c-407d-8270-09a39a0919a0"
